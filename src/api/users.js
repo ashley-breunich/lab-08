@@ -14,7 +14,7 @@ let sendJSON = (data,response) => {
   response.end();
 };
 
-router.get('/api/vi/users', (request,response,next) => {
+router.get('/api/v1/users', (request,response,next) => {
   users.find()
     .then(data => {
       const output = {
@@ -32,19 +32,19 @@ router.get('/api/v1/users/:id', (request, response,next) => {
     .catch(next);
 });
 
-router.post('/api/vi/users', (request,response,next) => {
+router.post('/api/v1/users', (request,response,next) => {
   users.save(request.body)
     .then(result => sendJSON(result,response))
     .catch(next);
 });
 
-router.put('/api/vi/users/:id', (request,response,next) => {
+router.put('/api/v1/users/:id', (request,response,next) => {
   users.put(request.params.id, request.body)
     .then(result => sendJSON(result,response))
     .catch(next);
 });
 
-router.patch('/api/vi/users/:id', (request,response,next) => {
+router.patch('/api/v1/users/:id', (request,response,next) => {
   users.patch(request.params.id, request.body)
     .then(result => sendJSON(result,response))
     .catch(next);

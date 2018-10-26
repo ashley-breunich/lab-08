@@ -9,7 +9,7 @@ const database = {};
 storage.find = query => {
   let id = query && query._id;
   return new Promise( (resolve,reject) => {
-
+    console.log(reject);
     if ( id && database[id] ) {
       resolve(database[id]);
     }
@@ -38,6 +38,7 @@ storage.delete = id => {
 
 storage.save = (data) => {
   return new Promise( (resolve,reject) => {
+    console.log(reject);
     data._id = data._id || uuid();
     let record = Object.assign({}, database[data._id], data);
     database[record._id] = record;
