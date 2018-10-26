@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ashley-breunich/lab-08.svg?branch=master)](https://www.travis-ci.com/ashley-breunich/lab-08)
+
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB - Express Routing & Middleware
 =======================================================
 
