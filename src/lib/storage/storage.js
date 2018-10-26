@@ -2,7 +2,7 @@
 
 import memoryStorage from './memory.js';
 
-import fileStorage from './filesystem.js';
+import fileStorage from './file.js';
 
 let dataStorageModule = {};
 console.log(dataStorageModule);

@@ -1,6 +1,7 @@
 'use strict';
 
 import storage from '../lib/storage/storage.js';
+// var revalidator = require('revalidator');
 
 class Users {
 
