@@ -61,7 +61,10 @@ router.patch('/api/v1/:model/:id', (request,response,next) => {
 
 router.delete('/api/v1/:model/:id', (request,response,next) => {
   request.model.delete(request.params.id)
-    .then(result => sendJSON(result, response))
+    .then(() => {
+      response.statusCode = 200;
+      response.end();
+    })
     .catch(next);
 });
 
