@@ -19,11 +19,8 @@ console.log(notes);
 
 router.param('model', modelFinder);
 
-// router.param('model', (req,res,next) => {
-//   console.log('You want to use', req.params.model);
-// });
-
 router.get('/api/v1/:model', (request,response,next) => {
+  // console.log(request);
   request.model.find()
     .then(data => {
       const output = {

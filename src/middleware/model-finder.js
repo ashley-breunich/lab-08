@@ -1,8 +1,9 @@
 'use strict';
 
-import requireAll from 'require-dir';
+// import requireAll from 'require-dir';
 
-const models = requireAll('../models');
+// const models = requireAll('../models');
+const models = { users: require('../models/users.js'), notes: require('../models/notes.js')};
 
 export default (req,res,next) => {
   let model = req.params.model;
@@ -13,4 +14,3 @@ export default (req,res,next) => {
     next('Invalid Model');
   }
 };
-console.log(models);
